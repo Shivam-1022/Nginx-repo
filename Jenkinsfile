@@ -21,9 +21,12 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
-                echo "Deploying..."
-            }
-        }
+    steps {
+        sh '''
+        sudo cp index.html /var/www/html/
+        sudo systemctl restart nginx
+        '''
+    }
+}
     }
 }
