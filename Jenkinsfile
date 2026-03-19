@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Shivam-1022/Nginx-repo.git'
+                git branch: 'main', url: 'https://github.com/Shivam-1022/Nginx-repo.git'
             }
         }
 
